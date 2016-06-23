@@ -9,6 +9,16 @@
 npm i --save site-detector
 ```
 
+### Command Line Interface
+```
+npm i -g site-detector
+site-detector whitehouse.gov
+```
+You will get the result
+```
+{ Drupal: '7' }
+```
+
 ### ES6
 ```js
 import siteDetector from 'site-detector'
@@ -33,7 +43,7 @@ siteDetector('https://your-site.com/', function(app) {
 
 ## TODO
 * [ ] Clean up (remove redundant files)
-* [ ] Add command line tool
+* [x] Add command line tool
 * [ ] Add more tests
 * [ ] Add more features (platform, script)
 

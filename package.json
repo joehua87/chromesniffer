@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha -t 5000 'tests/*.test.js'"
   },
+  "bin": {
+    "site-detector": "./bin/site-detector.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joehua87/site-detector.git"
@@ -22,6 +25,7 @@
   },
   "homepage": "https://github.com/joehua87/site-detector#readme",
   "dependencies": {
+    "commander": "^2.9.0",
     "jsdom": "^9.2.1"
   },
   "devDependencies": {

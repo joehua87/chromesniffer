@@ -34,7 +34,8 @@ siteDetector('https://your-site.com/', function(app) {
 ## TODO
 * [ ] Clean up (remove redundant files)
 * [ ] Add command line tool
-* * [ ] Add more features (platform, script)
+* [ ] Add more tests
+* [ ] Add more features (platform, script)
 
 ## Credit
 https://github.com/nqbao/chromesniffer

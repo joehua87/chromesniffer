@@ -109,6 +109,7 @@ module.exports = function (window) {
     'ZenPhoto': /zp-core\/js/i,
     'Gallery2': /main\.php\?.*g2_.*/i,
     'AdSense': /pagead\/show_ads\.js/,
+    'GoogleTag': /www.googletagservices.com\/tag\/js\/gpt.js/,
     'XenForo': /js\/xenforo\//i,
     'Cappuccino': /Frameworks\/Objective-J\/Objective-J\.js/,
     'Avactis': /\/avactis-themes\//i,

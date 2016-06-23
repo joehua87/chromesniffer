@@ -8,8 +8,9 @@
  * @license GPLv3
  **/
 
-(function () {
+module.exports = function (window) {
   var _apps = {};
+  var document = window.document;
   var doc = document.documentElement;
   var name;
   var r;
@@ -72,7 +73,7 @@
 
   for (var idx in metas) {
     var m = metas[idx];
-    name = m.name ? m.name.toLowerCase() : "";
+    name = m.getAttribute('name') ? m.getAttribute('name').toLowerCase() : "";
 
     if (!meta_tests[name]) continue;
 
@@ -127,8 +128,8 @@
 
   for (var idx in scripts) {
     var s = scripts[idx];
-    if (!s.src) continue;
-    s = s.src;
+    if (!s.getAttribute('src')) continue;
+    s = s.getAttribute('src');
 
     for (var t in script_tests) {
       if (t in _apps) continue;
@@ -313,12 +314,12 @@
       return window.et_params;
     },
     'SPDY': function () {
-      return window.chrome.loadTimes().wasFetchedViaSpdy;
+      return window.chrome && window.chrome.loadTimes().wasFetchedViaSpdy;
     },
     'LiveStreet': function () {
       return window.LIVESTREET_SECURITY_KEY;
     },
-	'OpenLayers': function () {
+    'OpenLayers': function () {
       return window.OpenLayers;
     },
     'Zepto': function () {
@@ -401,9 +402,9 @@
       if (window.angular && window.angular.version && 'full' in window.angular.version)
         return window.angular.version.full;
     },
-	'OpenLayers': function () {
+    'OpenLayers': function () {
       if( window.OpenLayers && window.OpenLayers.VERSION_NUMBER )
-	  return window.OpenLayers.VERSION_NUMBER;
+        return window.OpenLayers.VERSION_NUMBER;
     }
   };
 
@@ -459,15 +460,6 @@
       break;
     }
   }
-
-  // convert to array
-  var jsonString = JSON.stringify(_apps);
-  // send back to background page
-  var meta = document.getElementById('chromesniffer_meta');
-  meta.content = jsonString;
-
-  //Notify Background Page
-  var done = document.createEvent('Event');
-  done.initEvent('ready', true, true);
-  meta.dispatchEvent(done);
-})();
+  
+  return _apps;
+}

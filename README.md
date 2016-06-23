@@ -1,13 +1,40 @@
-# AppSpector
+## Introduction
+* Similar to builtwith.com
+* This project is an npm package forked from https://github.com/nqbao/chromesniffer (a chrome extension)
 
-Detect web applications and javascript libraries run on browsing website.
+## Usage
 
-This is a chrome extension will help web developer to inspect web framework / CMS and javascript library running on current browsing website. An icon will appear on address bar indicates the detected framework. Version detecting is being implemented.
-Currently, this extension can detect more than 100 popular CMS and javascript libraries, and more will be added in future releases. Visit extension website for more detail.
+###
+```
+npm i --save site-detector
+```
 
-## Release Note
-What's new in 0.3.0:
+### ES6
+```js
+import siteDetector from 'site-detector'
+siteDetector('https://your-site.com/').then((app) => console.log(app))
+```
 
-- Rewrite manifest to match Chrome 20+
-- Add more CMSs and JavaScript libraries
-- Detect more information about website such as web servers, languages
+### ES5 Promise Style
+```js
+var siteDetector = require('site-detector')
+siteDetector('https://your-site.com/').then(function(app) {
+  console.log(app)
+})
+```
+
+### ES5 Callback Style
+```js
+var siteDetector = require('site-detector')
+siteDetector('https://your-site.com/', function(app) {
+  console.log(app)
+})
+```
+
+## TODO
+* [ ] Clean up (remove redundant files)
+* [ ] Add command line tool
+* * [ ] Add more features (platform, script)
+
+## Credit
+https://github.com/nqbao/chromesniffer

@@ -20,6 +20,7 @@ module.exports = function (window) {
   var meta_tests = {
     'generator': {
       'Joomla': /joomla!?\s*([\d\.]+)?/i,
+      'Drupal': /Drupal!?\s*([\d\.]+)?/i,
       'vBulletin': /vBulletin\s*(.*)/i,
       'WordPress': /WordPress\s*(.*)/i,
       'XOOPS': /xoops/i,

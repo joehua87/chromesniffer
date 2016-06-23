@@ -1,0 +1,31 @@
+{
+  "name": "site-detector",
+  "version": "0.1.0",
+  "description": "Website detector, like BuiltWith",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -t 5000 'tests/*.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joehua87/chromesniffer.git"
+  },
+  "keywords": [
+    "website",
+    "detector",
+    "builtwith"
+  ],
+  "author": "joehua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joehua87/chromesniffer/issues"
+  },
+  "homepage": "https://github.com/joehua87/chromesniffer#readme",
+  "dependencies": {
+    "jsdom": "^9.2.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}

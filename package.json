@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joehua87/chromesniffer.git"
+    "url": "git+https://github.com/joehua87/site-detector.git"
   },
   "keywords": [
     "website",
@@ -18,9 +18,9 @@
   "author": "joehua",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joehua87/chromesniffer/issues"
+    "url": "https://github.com/joehua87/site-detector/issues"
   },
-  "homepage": "https://github.com/joehua87/chromesniffer#readme",
+  "homepage": "https://github.com/joehua87/site-detector#readme",
   "dependencies": {
     "jsdom": "^9.2.1"
   },
